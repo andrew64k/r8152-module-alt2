@@ -1,0 +1,11 @@
+--- compatibility.h.orig	2023-09-29 00:25:40.774230131 +0000
++++ compatibility.h	2023-09-29 00:35:17.648831271 +0000
+@@ -551,7 +551,7 @@
+ #endif /* LINUX_VERSION_CODE < KERNEL_VERSION(4,9,0) */
+ #endif /* LINUX_VERSION_CODE < KERNEL_VERSION(4,10,0) */
+ #endif /* LINUX_VERSION_CODE < KERNEL_VERSION(4,12,0) */
+-#if LINUX_VERSION_CODE < KERNEL_VERSION(4,19,10) && \
++#if LINUX_VERSION_CODE < KERNEL_VERSION(4,19,0) && \
+     !(LINUX_VERSION_CODE >= KERNEL_VERSION(4,14,217) && LINUX_VERSION_CODE < KERNEL_VERSION(4,15,0))
+ 	static inline void skb_mark_not_on_list(struct sk_buff *skb)
+ 	{
